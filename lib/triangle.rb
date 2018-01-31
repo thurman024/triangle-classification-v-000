@@ -13,8 +13,14 @@ class Triangle
       raise TriangleError
     elsif sides[0] < 0
       raise TriangleError
+    elsif sides[0] == sides[1] == sides[2]
+      :equilateral
     elsif sides[0] == sides[1] || sides[1] == sides[2]
-
+      :isosceles
+    else
+      :scalene
+    end
+  end
 end
 
 
